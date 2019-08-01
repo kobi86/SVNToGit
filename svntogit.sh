@@ -13,7 +13,7 @@ echo Converting tags...
 git for-each-ref refs/remotes/origin/tags | cut -d / -f 5- |
 while read ref
 do
-git tag -a "$ref" -m "Essence say farewell to SVN" "refs/remotes/origin/tags/$ref"
+git tag -a "$ref" -m "say farewell to SVN" "refs/remotes/origin/tags/$ref"
 git push origin ":refs/heads/tags/$ref"
 git push origin tag "$ref"
 done
